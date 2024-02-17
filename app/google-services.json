@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "905877842752",
+    "project_id": "iwitness-34c3c",
+    "storage_bucket": "iwitness-34c3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905877842752:android:7ac75f79c44c4c94d4e8a5",
+        "android_client_info": {
+          "package_name": "com.dinisoft.eyewitness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905877842752-pnhbm8vsjka5d5v6k9ri82c9t3fmihjd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dinisoft.eyewitness",
+            "certificate_hash": "b2b09f2b4fc61b0baf858f1f42ce787630e2bae3"
+          }
+        },
+        {
+          "client_id": "905877842752-fk1th56npsrnjumohaqbrkoh683ek742.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc477eoS5uGQiwAYjW0zjg1I1PG7QZf20"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "905877842752-fk1th56npsrnjumohaqbrkoh683ek742.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-8968729342650927~6491171050"
+    }
+  ],
+  "configuration_version": "1"
+}

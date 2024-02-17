@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context=".ReviewActivity">
+
+    <LinearLayout
+        android:id="@+id/storyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/margin_2"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/img_police"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_circle"
+            android:backgroundTint="@color/white"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_marginTop="@dimen/margin_1"
+            android:padding="@dimen/margin_2"
+            android:clickable="true"
+            android:layout_marginLeft="@dimen/margin_2"
+            android:src="@drawable/police"/>
+        <ImageView
+            android:id="@+id/img_accident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_circle"
+            android:backgroundTint="@color/white"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_marginTop="@dimen/margin_1"
+            android:padding="@dimen/margin_2"
+            android:clickable="true"
+            android:layout_marginLeft="@dimen/margin_2"
+            android:src="@drawable/accident"/>
+        <ImageView
+            android:id="@+id/img_robbery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_circle"
+            android:backgroundTint="@color/white"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_marginTop="@dimen/margin_1"
+            android:padding="@dimen/margin_2"
+            android:clickable="true"
+            android:layout_marginLeft="@dimen/margin_2"
+            android:src="@drawable/robbery"/>
+
+        <ImageView
+            android:id="@+id/img_rape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_circle"
+            android:backgroundTint="@color/white"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_marginTop="@dimen/margin_1"
+            android:padding="@dimen/margin_2"
+            android:clickable="true"
+            android:layout_marginLeft="@dimen/margin_2"
+            android:src="@drawable/rape"/>
+
+        <ImageView
+            android:id="@+id/img_terrorist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_circle"
+            android:backgroundTint="@color/white"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_marginTop="@dimen/margin_1"
+            android:padding="@dimen/margin_2"
+            android:clickable="true"
+            android:layout_marginLeft="@dimen/margin_2"
+            android:src="@drawable/terrorist"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/revLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/storyBtn"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/margin_2"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_approved"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_custom_button"
+            android:background="@color/material_flat_white"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_size_regular"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:layout_gravity="left"
+            android:text="Approved"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_review"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_custom_button"
+            android:textColor="@color/text_primary"
+            android:background="@color/material_flat_white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_2"
+            android:layout_marginRight="@dimen/margin_2"
+            android:text="Reviews"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_rejected"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_custom_button"
+            android:background="@color/material_flat_white"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_size_regular"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:layout_gravity="right"
+            android:text="Rejected"/>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cardList"
+        android:visibility="visible"
+        android:layout_below="@+id/revLocation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="105dp"
+        android:layout_marginBottom="@dimen/card_list_margin_bottom" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/defaultMessageTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_2"
+            android:visibility="visible"
+            android:layout_centerVertical="true"
+            android:textAlignment="center"
+            android:text="@string/title_reported_info"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle">
+
+        </androidx.appcompat.widget.AppCompatTextView>
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_item_userDp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        card_view:cardBackgroundColor="@color/white"
+        card_view:cardPreventCornerOverlap="false"
+        card_view:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/userDp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_circle"
+                android:foreground="?attr/selectableItemBackground"
+                card_view:srcCompat="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:id="@+id/txt_storage_used"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/material_core_red"
+                android:layout_marginLeft="@dimen/margin_6"
+                android:text="::::: MB: Used"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_large"
+                android:fontFamily="@font/lato" />
+
+
+            <TextView
+                android:id="@+id/txt_storage_cap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginLeft="@dimen/margin_2"
+                android:text="::::: MB: Total"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_large"
+                android:fontFamily="@font/lato" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

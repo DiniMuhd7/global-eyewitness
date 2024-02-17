@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dinisoft.eyewitness">
+    
+    <!-- Always Required to get content and check if internet is available -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Get Dial Phone Call permission -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    
+    <!-- Required for storage, If you app cash is enable to read/write anything then enable it. -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    
+    <!-- Required for Location get, If you app use location service then enable it. -->
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="true" />
+
+    
+    <!-- Required for camera, If you need camera then enable it. -->
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT"
+        tools:ignore="ProtectedPermissions" />
+
+    
+    <!-- Required for maps, if your need the map function then only enable it. -->
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    
+    <!-- Required for visualizer & radio, if you need then only enable it. -->
+    <!--
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    -->
+    
+    <!-- Required for microphone, if you need then only enable it. -->
+
+    <uses-permission android:name="android.permission.MICROPHONE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <supports-screens android:resizeable="true"
+    android:largeScreens="true"
+    android:xlargeScreens="true">
+    </supports-screens>
+
+    <!-- Required for tumblr,  if you need then only enable it -->
+    <!--
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    -->
+    
+    <!-- Required for in-app purchases, if you need then only enable it. -->
+    <!--
+    <uses-permission android:name="com.android.vending.BILLING" />
+    -->
+
+    <!-- Enable only if you are using Firebase notificaion-->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
+    <!-- Enable only if you are using OneSignal notificaion-->
+    <!--
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    -->
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppThemePrimary"
+        android:configChanges="orientation|screenSize"
+        android:name="com.dinisoft.eyewitness.setting.OnesignalMessagingService"
+        tools:replace="android:allowBackup"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_api_key" />
+
+
+        <activity
+            android:name="com.dinisoft.eyewitness.MainActivity"
+            android:exported="true"
+            android:hardwareAccelerated="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Enable only if you need deep link-->
+            <!-- Accepts URIs that begin with "https://www.infixsoft.com/" -->
+            <!-- If you want to open all the URL then: android:pathPattern=".*"" -->
+            <!--
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="myapp" android:host="infixsoft" />
+                <data android:scheme="https" android:host="help.infixsoft.com/" />
+                <data android:scheme="http" android:host="infixsoft.com/data" android:pathPattern=".*"/>
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.dinisoft.eyewitness.ui.splash.SplashActivity"
+            android:hardwareAccelerated="true"
+            android:theme="@style/AppThemePrimary"
+            android:label="@string/title_activity_splash" />
+        <activity
+            android:name="com.dinisoft.eyewitness.ui.home.HomeActivity"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_home"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@style/AppThemePrimary" />
+
+        <activity
+            android:name="com.dinisoft.eyewitness.MapActivity"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:configChanges="keyboard|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+
+
+        <activity
+            android:name="com.dinisoft.eyewitness.DashUserActivity"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:configChanges="keyboard|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+
+        <activity
+            android:name="com.dinisoft.eyewitness.DashAgencyActivity"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:configChanges="keyboard|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+
+        <activity
+            android:name="com.dinisoft.eyewitness.ChatActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:configChanges="keyboard|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@style/AppThemePrimary">
+        </activity>
+
+        <activity
+            android:name="com.dinisoft.eyewitness.DescribeIncident"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:configChanges="keyboard|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@style/AppThemePrimary">
+        </activity>
+
+        <activity
+            android:name="com.dinisoft.eyewitness.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/AppThemePrimary"
+            android:parentActivityName="com.dinisoft.eyewitness.ChatActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dinisoft.eyewitness.ChatActivity" />
+        </activity>
+
+        <activity
+            android:name="com.dinisoft.eyewitness.ExoActivity"
+            android:hardwareAccelerated="true" />
+
+        <activity
+            android:name="com.dinisoft.eyewitness.ImageActivity"
+            android:hardwareAccelerated="true">
+        </activity>
+
+        <activity
+            android:name="com.dinisoft.eyewitness.PDFActivity"
+            android:hardwareAccelerated="true">
+        </activity>
+
+        <activity
+            android:name="com.dinisoft.eyewitness.AuthUIActivity"
+            android:hardwareAccelerated="true">
+        </activity>
+
+        <activity
+            android:name="com.dinisoft.eyewitness.UserProfActivity"
+            android:hardwareAccelerated="true">
+        </activity>
+
+        <activity
+            android:name="com.dinisoft.eyewitness.AgencyProfActivity"
+            android:hardwareAccelerated="true">
+        </activity>
+
+        <activity
+            android:name="com.dinisoft.eyewitness.ReviewActivity"
+            android:hardwareAccelerated="true">
+        </activity>
+
+
+        <activity
+            android:name="com.dinisoft.eyewitness.ComplaintActivity"
+            android:hardwareAccelerated="true">
+        </activity>
+
+        <activity
+            android:name="com.dinisoft.eyewitness.BuyStorageActivity"
+            android:hardwareAccelerated="true">
+        </activity>
+
+        <activity
+            android:name="com.dinisoft.eyewitness.CheckoutActivity"
+            android:hardwareAccelerated="true">
+        </activity>
+
+        <activity
+            android:name="com.dinisoft.eyewitness.IncidentChatActivity"
+            android:hardwareAccelerated="true">
+        </activity>
+
+        <activity
+            android:name="com.dinisoft.eyewitness.EyelensActivity"
+            android:hardwareAccelerated="true">
+        </activity>
+
+        <activity
+            android:name="com.dinisoft.eyewitness.CaseFeedActivity"
+            android:hardwareAccelerated="true">
+        </activity>
+
+        <activity
+            android:name="com.dinisoft.eyewitness.RedListAddActivity"
+            android:hardwareAccelerated="true">
+        </activity>
+
+        <activity
+            android:name="com.dinisoft.eyewitness.RedListFeedActivity"
+            android:hardwareAccelerated="true">
+        </activity>
+
+        <activity
+            android:name="com.dinisoft.eyewitness.TableStatsActivity"
+            android:hardwareAccelerated="true">
+        </activity>
+    
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="android.webkit.WebView.EnableSafeBrowsing"
+            android:value="false" />
+        <meta-data
+            android:name="android.webkit.WebView.MetricsOptOut"
+            android:value="true" />
+
+
+
+
+
+        <!-- Enable only if you are using Firebase -->
+        <!--
+        <service android:name=".setting.FirebaseMessagingService"
+            android:permission="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        -->
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/facebook_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- Enable only if you are using Google Ads -->
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8968729342650927~6491171050"/>
+    
+        <!-- Enable only if you are using Onesignal -->
+        <!--
+        <meta-data
+            android:name="onesignal_app_id"
+            android:value="@string/onesignal_app_id"
+            tools:replace="android:value" />
+        <meta-data
+            android:name="com.onesignal.NotificationAccentColor.DEFAULT"
+            android:value="@color/colorNotification" />
+        <meta-data
+            android:name="com.onesignal.NotificationOpened.DEFAULT"
+            android:value="DISABLE" />
+         -->
+        <meta-data
+            android:name="com.onesignal.NotificationOpened.DEFAULT"
+            android:value="DISABLE" />
+    </application>
+
+</manifest>

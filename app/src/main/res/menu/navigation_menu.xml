@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:title="@string/menu_home"
+            android:id="@+id/menu_home"
+            android:icon="@drawable/ic_home" />
+
+        <item
+            android:title="@string/menu_map"
+            android:id="@+id/menu_map"
+            android:icon="@android:drawable/ic_dialog_map" />
+
+        <item
+            android:title="@string/menu_bot"
+            android:id="@+id/menu_bot"
+            android:icon="@drawable/ic_label" />
+
+        <item
+            android:title="@string/menu_complaint"
+            android:id="@+id/menu_complaint"
+            android:icon="@drawable/ic_info" />
+
+        <item
+            android:title="@string/menu_profile"
+            android:id="@+id/menu_profile"
+            android:icon="@drawable/ic_baseline_person_24" />
+
+        <item
+            android:title="@string/menu_game"
+            android:id="@+id/menu_game"
+            android:icon="@drawable/fui_ic_apple_white_24dp" />
+
+        <item
+            android:title="@string/menu_social"
+            android:id="@+id/menu_social"
+            android:icon="@drawable/ic_world_wide_web" />
+
+        <item
+            android:title="@string/menu_about"
+            android:id="@+id/menu_about"
+            android:icon="@drawable/ic_info" />
+
+    </group>
+
+    <item android:title="">
+        <menu>
+
+            <item
+                android:title="@string/menu_rate"
+                android:id="@+id/menu_rate"
+                android:icon="@drawable/ic_rate" />
+
+            <item
+                android:title="@string/menu_share"
+                android:id="@+id/menu_share"
+                android:icon="@drawable/ic_share" />
+        </menu>
+    </item>
+</menu>

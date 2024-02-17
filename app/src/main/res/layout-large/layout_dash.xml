@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:openDrawer="start">
+
+        <RelativeLayout
+        android:id="@+id/layout_dash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
+
+        <!--
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment" />
+        -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_item_dash_search"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_below="@+id/layout_toolbar"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/margin_1"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardPreventCornerOverlap="false"
+                card_view:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/txt_marker_title_dash_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="?actionBarSize"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:layout_marginLeft="@dimen/margin_1"
+                        android:layout_marginRight="@dimen/margin_1"
+                        android:layout_marginBottom="@dimen/margin_1"
+                        android:layout_gravity="center"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:hint="Search Complaint e.g Lsk7k84ktWzYk2nOx"
+                        android:textSize="@dimen/text_size_large"
+                        android:fontFamily="@font/lato">
+
+                    </EditText>
+
+                    <ImageView
+                        android:id="@+id/ic_search_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:clickable="true"
+                        android:background="@android:drawable/ic_menu_search"
+                        android:gravity="right">
+
+                    </ImageView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_item_dash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/storyBtn"
+
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/txt_marker_title_dash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="@dimen/margin_1"
+            android:layout_marginLeft="@dimen/margin_2"
+            android:layout_marginRight="@dimen/margin_2"
+            android:layout_marginBottom="@dimen/margin_1"
+            android:layout_gravity="center"
+            android:text="Loading..."
+            android:textAllCaps="true"
+            android:textSize="@dimen/text_size_large"
+            android:fontFamily="@font/lato" />
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:id="@+id/layout_dash_linear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_item_dash"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_item_police"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_item_dash"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_title_police"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_1"
+                    android:layout_marginLeft="@dimen/margin_2"
+                    android:layout_marginRight="@dimen/margin_2"
+                    android:text="Misconduct"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textColor="@color/text_primary"
+                    android:fontFamily="@font/lato" />
+
+
+                <TextView
+                    android:id="@+id/txt_value_police"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/margin_2"
+                    android:layout_marginTop="@dimen/margin_2"
+                    android:layout_gravity="center"
+                    android:text=":::::"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_size_large"
+                    android:textColor="@color/text_ink"
+                    android:fontFamily="@font/lato" />
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_item_accident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_item_dash"
+
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_title_accident"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_1"
+                    android:layout_marginLeft="@dimen/margin_2"
+                    android:layout_marginRight="@dimen/margin_2"
+                    android:text="Accident"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textColor="@color/text_primary"
+                    android:fontFamily="@font/lato" />
+
+
+                <TextView
+                    android:id="@+id/txt_value_accident"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/margin_2"
+                    android:layout_marginTop="@dimen/margin_2"
+                    android:layout_gravity="center"
+                    android:text=":::::"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_size_large"
+                    android:textColor="@color/material_core_orange"
+                    android:fontFamily="@font/lato" />
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_item_robbery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_item_dash"
+
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardPreventCornerOverlap="false"
+                card_view:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_title_robbery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:layout_marginLeft="@dimen/margin_2"
+                        android:layout_marginRight="@dimen/margin_2"
+                        android:text="Theft"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/lato" />
+
+
+                    <TextView
+                        android:id="@+id/txt_value_robbery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/margin_2"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_gravity="center"
+                        android:text=":::::"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_large"
+                        android:textColor="@color/color_theft"
+                        android:fontFamily="@font/lato" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_item_murder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_item_dash"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardPreventCornerOverlap="false"
+                card_view:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_title_murder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:layout_marginLeft="@dimen/margin_2"
+                        android:layout_marginRight="@dimen/margin_2"
+                        android:text="Murder"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/lato" />
+
+
+                    <TextView
+                        android:id="@+id/txt_value_murder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/margin_2"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_gravity="center"
+                        android:text=":::::"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_large"
+                        android:textColor="@color/material_core_blue_grey"
+                        android:fontFamily="@font/lato" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_item_assault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_item_dash"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardPreventCornerOverlap="false"
+                card_view:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_title_assault"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:layout_marginLeft="@dimen/margin_2"
+                        android:layout_marginRight="@dimen/margin_2"
+                        android:text="Assault"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/lato" />
+
+
+                    <TextView
+                        android:id="@+id/txt_value_assault"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/margin_2"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_gravity="center"
+                        android:text=":::::"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_large"
+                        android:textColor="@color/text_ink"
+                        android:fontFamily="@font/lato" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            -->
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_item_fire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_item_dash"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardPreventCornerOverlap="false"
+                card_view:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_title_fire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:layout_marginLeft="@dimen/margin_2"
+                        android:layout_marginRight="@dimen/margin_2"
+                        android:text="Fire"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/lato" />
+
+
+                    <TextView
+                        android:id="@+id/txt_value_fire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/margin_2"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_gravity="center"
+                        android:text=":::::"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_large"
+                        android:textColor="@color/material_core_red"
+                        android:fontFamily="@font/lato" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_dash_linear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_dash_linear1"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_item_flood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_item_dash"
+
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardPreventCornerOverlap="false"
+                card_view:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_title_flood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:layout_marginLeft="@dimen/margin_2"
+                        android:layout_marginRight="@dimen/margin_2"
+                        android:text="Flooding"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/lato" />
+
+
+                    <TextView
+                        android:id="@+id/txt_value_flood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/margin_2"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_gravity="center"
+                        android:text=":::::"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_large"
+                        android:textColor="@color/material_core_green"
+                        android:fontFamily="@font/lato" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_item_rape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_item_dash"
+
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardPreventCornerOverlap="false"
+                card_view:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_title_rape"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:layout_marginLeft="@dimen/margin_2"
+                        android:layout_marginRight="@dimen/margin_2"
+                        android:text="Sexual-Assault"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/lato" />
+
+
+                    <TextView
+                        android:id="@+id/txt_value_rape"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/margin_2"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_gravity="center"
+                        android:text=":::::"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_large"
+                        android:textColor="@color/material_core_pink"
+                        android:fontFamily="@font/lato" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_item_drug"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_item_dash"
+
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardPreventCornerOverlap="false"
+                card_view:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_title_drug"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:layout_marginLeft="@dimen/margin_2"
+                        android:layout_marginRight="@dimen/margin_2"
+                        android:text="Drugs"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/lato" />
+
+
+                    <TextView
+                        android:id="@+id/txt_value_drug"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/margin_2"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_gravity="center"
+                        android:text=":::::"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_large"
+                        android:textColor="@color/material_core_cyan"
+                        android:fontFamily="@font/lato" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_item_terrorism"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_item_dash"
+
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardPreventCornerOverlap="false"
+                card_view:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_title_terrorism"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:layout_marginLeft="@dimen/margin_2"
+                        android:layout_marginRight="@dimen/margin_2"
+                        android:text="Terrorism"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/lato" />
+
+
+                    <TextView
+                        android:id="@+id/txt_value_terrorism"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/margin_2"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_gravity="center"
+                        android:text=":::::"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_large"
+                        android:textColor="@color/color_terror"
+                        android:fontFamily="@font/lato" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_item_column_chart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_dash_linear2"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dialog"
+                        android:layout_marginLeft="@dimen/margin_1"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/margin_1"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/statsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginRight="90dp"
+                        android:text="Stats"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/lato" />
+
+
+
+                    <!--
+                    <ImageView
+                        android:id="@+id/img_table"
+                        android:layout_width="@dimen/text_24"
+                        android:layout_height="@dimen/text_24"
+                        android:background="@drawable/ic_circle"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginRight="@dimen/margin_1"
+                        android:layout_gravity="right"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:clickable="true"
+                        android:src="@android:drawable/ic_menu_more"/>
+                        -->
+
+
+                </LinearLayout>
+
+
+                <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/storyBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/img_police"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_circle"
+                android:backgroundTint="@color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_marginTop="50dp"
+                android:padding="@dimen/margin_2"
+                android:clickable="true"
+                android:layout_marginLeft="@dimen/margin_2"
+                android:src="@drawable/police">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/img_accident"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_circle"
+                android:backgroundTint="@color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_marginTop="50dp"
+                android:padding="@dimen/margin_2"
+                android:clickable="true"
+                android:layout_marginLeft="@dimen/margin_2"
+                android:src="@drawable/accident"/>
+            <ImageView
+                android:id="@+id/img_robbery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_circle"
+                android:backgroundTint="@color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_marginTop="50dp"
+                android:padding="@dimen/margin_2"
+                android:clickable="true"
+                android:layout_marginLeft="@dimen/margin_2"
+                android:src="@drawable/robbery"/>
+
+            <ImageView
+                android:id="@+id/img_rape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_circle"
+                android:backgroundTint="@color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_marginTop="50dp"
+                android:padding="@dimen/margin_2"
+                android:clickable="true"
+                android:layout_marginLeft="@dimen/margin_2"
+                android:src="@drawable/rape"/>
+
+            <ImageView
+                android:id="@+id/img_terrorist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_circle"
+                android:backgroundTint="@color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_marginTop="50dp"
+                android:padding="@dimen/margin_2"
+                android:clickable="true"
+                android:layout_marginLeft="@dimen/margin_2"
+                android:src="@drawable/terrorist"/>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:paddingLeft="@dimen/margin_5"
+            android:paddingRight="@dimen/margin_5"
+            android:background="@drawable/bg_gradient_toolbar">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_left_menu"
+                android:layout_width="@dimen/toolbar_custom_icon"
+                android:layout_height="@dimen/toolbar_custom_icon"
+                android:contentDescription="@string/app_name"
+                android:layout_marginRight="@dimen/margin_2"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_menu" />
+            <TextView
+                android:id="@+id/txt_toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/img_left_menu"
+                android:layout_toLeftOf="@+id/img_ic_base_search"
+                android:text="@string/app_name"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_size_3xl"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/lato" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_ic_base_search"
+                android:layout_width="@dimen/toolbar_custom_icon"
+                android:layout_height="@dimen/toolbar_custom_icon"
+                android:layout_marginRight="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_baseline_search" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_right_menu_exit"
+                android:layout_width="@dimen/toolbar_custom_icon"
+                android:layout_height="@dimen/toolbar_custom_icon"
+                android:contentDescription="@string/app_name"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_exit_toolbar" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/flotBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/storyBtn"
+            android:gravity="bottom"
+            android:layout_marginTop="@dimen/margin_3"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabCallnSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="30dp"
+                android:background="@color/colorPrimary"
+                android:clickable="true"
+                android:layout_gravity="right|bottom"
+                android:src="@android:drawable/ic_menu_call"
+                android:rotation="0" />
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="30dp"
+                android:background="@color/colorPrimary"
+                android:clickable="true"
+                android:layout_gravity="center|bottom"
+                android:src="@android:drawable/ic_menu_camera"
+                android:rotation="0" />
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabEyelens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="30dp"
+                android:background="@color/colorPrimary"
+                android:clickable="true"
+                android:layout_gravity="left|bottom"
+                android:src="@android:drawable/ic_menu_view"
+                android:rotation="0" />
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="false"
+            app:headerLayout="@layout/navigation_header" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

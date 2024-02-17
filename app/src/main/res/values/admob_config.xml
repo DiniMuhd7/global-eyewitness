@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- If you are using AdMMob then set your app ID here-->
+	<!-- Remember ad ID contains '~', for more: https://support.google.com/admob/answer/7356431-->
+	<!-- set admob key ex: ca-app-pub-3940256099942544~XXXXXXX-->
+	<string name="admob_app_id">ca-app-pub-8968729342650927~6491171050</string>
+
+	<!-- Add unit id -->
+	<string name="admob_banner_id">ca-app-pub-8968729342650927/9417373836</string>
+	<string name="admob_interstitial_id">ca-app-pub-8968729342650927/2902252160</string>
+	<string name="admob_rewarded_id">ca-app-pub-8968729342650927/5580386396</string>
+
+	<string name="admob_interstitial_test_id">ca-app-pub-3940256099942544/1033173712</string>
+	<string name="admob_rewarded_test_id">ca-app-pub-3940256099942544/5224354917</string>
+</resources>

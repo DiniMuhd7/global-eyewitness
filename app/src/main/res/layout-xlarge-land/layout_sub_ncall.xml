@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:background="@color/transparent">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/margin_4"
+        card_view:cardCornerRadius="@dimen/margin_4"
+        card_view:cardBackgroundColor="@color/white"
+        card_view:cardPreventCornerOverlap="false"
+        card_view:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_5"
+                android:textAllCaps="true"
+                android:textSize="@dimen/text_size_large"
+                android:fontFamily="@font/lato"
+                android:text="@string/emergency_call"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/margin_3"
+                android:background="@color/divider"/>
+
+            <TextView
+                android:id="@+id/txt_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_2"
+                android:padding="@dimen/margin_2"
+                android:textSize="@dimen/text_size_medium"
+                android:gravity="center"
+                android:text="@string/emergency_alert"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/margin_3"
+                android:background="@color/divider"/>
+
+            <TextView
+                android:id="@+id/txt_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textColor="@color/text_primary"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_4"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_large"
+                android:fontFamily="@font/lato"
+                android:text="Select Location"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_2"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_state"
+                    android:layout_width="@dimen/width_custom_button"
+                    android:layout_height="@dimen/height_custom_button"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/text_size_regular"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:layout_marginBottom="@dimen/margin_4"
+                    android:text="@string/state_string"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_country"
+                    android:layout_width="@dimen/width_custom_button"
+                    android:layout_height="@dimen/height_custom_button"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/text_size_regular"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:layout_marginLeft="@dimen/margin_1"
+                    android:layout_marginRight="@dimen/margin_1"
+                    android:layout_marginBottom="@dimen/margin_4"
+                    android:text="@string/country_string"/>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_global"
+                    android:layout_width="@dimen/width_custom_button"
+                    android:layout_height="@dimen/height_custom_button"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/text_size_regular"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:layout_marginBottom="@dimen/margin_4"
+                    android:text="@string/global_string"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_agency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textColor="@color/text_primary"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_4"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_large"
+                android:fontFamily="@font/lato"
+                android:text="Loading..."/>
+
+            <Spinner
+                android:id="@+id/spin_agency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_4"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/margin_4"
+                android:background="@color/divider"/>
+
+            <TextView
+                android:id="@+id/txt_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textColor="@color/text_primary"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_4"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_large"
+                android:fontFamily="@font/lato"
+                android:text="@string/emergency_action"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_call"
+                    android:layout_width="@dimen/width_custom_button"
+                    android:layout_height="@dimen/height_custom_button"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/text_size_regular"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:layout_marginBottom="@dimen/margin_8"
+                    android:text="@string/call_emergency"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_done"
+                    android:layout_width="@dimen/width_custom_button"
+                    android:layout_height="@dimen/height_custom_button"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/text_size_regular"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_1"
+                    android:layout_marginRight="@dimen/margin_1"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:layout_marginBottom="@dimen/margin_8"
+                    android:text="@string/label_close_dialog"/>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_subscribe"
+                    android:layout_width="@dimen/width_custom_button"
+                    android:layout_height="@dimen/height_custom_button"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/text_size_regular"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:layout_marginBottom="@dimen/margin_8"
+                    android:text="@string/subscribe_agency"/>
+
+
+            </LinearLayout>
+
+
+            <!--
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cardList"
+                android:visibility="visible"
+                android:layout_below="@+id/id_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="@dimen/card_list_margin_bottom" />
+               -->
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
