@@ -6,12 +6,12 @@
 	<!-- Notification Messaging Service -->
 	<string name="notification_title">@string/app_name</string>
 	<string name="default_notification_channel_id" translatable="false">fcm_rocketweb_channel</string>
-	<string name="map_api_key">AIzaSyAS1WyT8-3777aklY5dvXiEAsQdumu8QfM</string>
-	<string name="weather_api_key">05b509f2f6d62b8c29471a53060798c8</string>
-	<string name="paystack_pubkey">pk_live_d786f2037bc22c550b004f5e1c8801486edca15f</string>
-	<string name="paystack_testkey">pk_test_1811de9413578ca495a1bacb1b5b73ee8fbbcccb</string>
+	<string name="map_api_key"></string>
+	<string name="weather_api_key"></string>
+	<string name="paystack_pubkey"></string>
+	<string name="paystack_testkey"></string>
 
-	<!--<string name="web_client_id">905877842752-fk1th56npsrnjumohaqbrkoh683ek742.apps.googleusercontent.com</string>-->
+	<!--<string name="web_client_id"></string>-->
 
 	<!-- Webview config -->
 	<string name="user_agent_string"></string>
