@@ -2,7 +2,7 @@
   "project_info": {
     "project_number": "905877842752",
     "project_id": "iwitness-34c3c",
-    "storage_bucket": "iwitness-34c3c.appspot.com"
+    "storage_bucket": ""
   },
   "client": [
     {
@@ -18,7 +18,7 @@
           "client_type": 1,
           "android_info": {
             "package_name": "com.dinisoft.eyewitness",
-            "certificate_hash": "b2b09f2b4fc61b0baf858f1f42ce787630e2bae3"
+            "certificate_hash": ""
           }
         },
         {
@@ -28,7 +28,7 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBc477eoS5uGQiwAYjW0zjg1I1PG7QZf20"
+          "current_key": ""
         }
       ],
       "services": {
@@ -41,7 +41,7 @@
           ]
         }
       },
-      "admob_app_id": "ca-app-pub-8968729342650927~6491171050"
+      "admob_app_id": ""
     }
   ],
   "configuration_version": "1"
