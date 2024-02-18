@@ -8,10 +8,10 @@ apply plugin: 'com.google.gms.google-services'
 android {
     signingConfigs {
         debug {
-            storeFile file('/Users/deen-adem/GithubPush/KeySignature/eyewitness/keystore/eyewitness.keystore')
-            storePassword 'KALAkuta2005'
-            keyAlias 'dinisoft'
-            keyPassword 'KALAkuta2005'
+            storeFile file('/')
+            storePassword ''
+            keyAlias ''
+            keyPassword ''
         }
     }
 
